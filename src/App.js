@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
+import Navbar from './components/Navbar';
+import CreatePost from './components/CreatePost';
+import ChooseFile from './components/ChooseFile';
+import Post from './components/Post';
+import Comments from './components/Comments';
+import Filter from './components/Filter'
 
-function App() {
+
+class App extends React.Component{ 
+
+  render(){
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <div>
+    <Navbar />
+    <CreatePost />
+    
+    <Filter/>
+
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+   
+    
+    
     </div>
   );
-}
+}}
 
 export default App;
